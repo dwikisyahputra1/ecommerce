@@ -47,8 +47,8 @@ class Comment extends Migration
         ]);
 
         $this->forge->addKey('id', true);
-        $this->forge->addForeignKey('id_user', 'user', 'id');
-        $this->forge->addForeignKey('id_item', 'item', 'id');
+        $this->forge->addForeignKey('id_user', 'user', 'id', 'CASCADE', 'NO ACTION');
+        $this->forge->addForeignKey('id_item', 'item', 'id', 'CASCADE', 'NO ACTION');
         $this->forge->createTable('comment');
     }
 
